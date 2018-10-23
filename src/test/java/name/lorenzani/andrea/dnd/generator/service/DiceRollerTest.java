@@ -29,9 +29,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.fail;
 import static org.mockito.Mockito.when;
-import static junit.framework.TestCase.assertEquals;
 
 @RunWith(SpringRunner.class)
 public class DiceRollerTest {

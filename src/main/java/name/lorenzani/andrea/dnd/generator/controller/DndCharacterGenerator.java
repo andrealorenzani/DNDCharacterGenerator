@@ -17,10 +17,12 @@
 
 package name.lorenzani.andrea.dnd.generator.controller;
 
-import io.swagger.annotations.*;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import name.lorenzani.andrea.dnd.generator.exception.BadRequest;
 import name.lorenzani.andrea.dnd.generator.exception.InternalServerError;
 import name.lorenzani.andrea.dnd.generator.model.CharRequest;
 import name.lorenzani.andrea.dnd.generator.model.Character;
@@ -29,9 +31,11 @@ import name.lorenzani.andrea.dnd.generator.model.ErrorMessage;
 import name.lorenzani.andrea.dnd.generator.service.CharacterGenerator;
 import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
 import java.util.concurrent.ExecutionException;
 
 @RestController

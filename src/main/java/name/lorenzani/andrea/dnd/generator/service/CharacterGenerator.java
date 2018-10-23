@@ -23,18 +23,16 @@ import name.lorenzani.andrea.dnd.generator.model.CharRequest;
 import name.lorenzani.andrea.dnd.generator.model.Character;
 import name.lorenzani.andrea.dnd.generator.model.Characters;
 import name.lorenzani.andrea.dnd.generator.model.dndExternalApi.ClassResponse;
-import name.lorenzani.andrea.dnd.generator.model.dndExternalApi.GenericServiceListResponse;
-import name.lorenzani.andrea.dnd.generator.model.dndExternalApi.NameUrlResponse;
 import name.lorenzani.andrea.dnd.generator.model.dndExternalApi.RaceResponse;
-import name.lorenzani.andrea.dnd.generator.properties.DndApiProperties;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 @Slf4j
 @RequiredArgsConstructor

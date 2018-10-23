@@ -21,37 +21,25 @@ import name.lorenzani.andrea.dnd.generator.model.CharRequest;
 import name.lorenzani.andrea.dnd.generator.model.Character;
 import name.lorenzani.andrea.dnd.generator.model.Characters;
 import name.lorenzani.andrea.dnd.generator.model.dndExternalApi.ClassResponse;
-import name.lorenzani.andrea.dnd.generator.model.dndExternalApi.GenericServiceListResponse;
-import name.lorenzani.andrea.dnd.generator.model.dndExternalApi.NameUrlResponse;
 import name.lorenzani.andrea.dnd.generator.model.dndExternalApi.RaceResponse;
-import name.lorenzani.andrea.dnd.generator.properties.DndApiProperties;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentMatcher;
-import org.mockito.ArgumentMatchers;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
-import static org.assertj.core.internal.bytebuddy.matcher.ElementMatchers.is;
-import static org.assertj.core.internal.bytebuddy.matcher.ElementMatchers.isEquals;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.nullValue;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.junit.Assert.assertEquals;
-import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
