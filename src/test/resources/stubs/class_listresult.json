@@ -1,0 +1,12 @@
+{
+    "request": {
+        "url": "/classes/"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "class.json",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

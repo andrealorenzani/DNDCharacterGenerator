@@ -1,0 +1,49 @@
+request:
+  method: POST
+  url: /generate
+  body:
+    level: 1
+    race: dwarf
+    class: cleric
+  headers:
+    Content-Type: application/json
+response:
+  status: 200
+  body:
+    name: Char 0
+    strength: 1
+    dexterity: 2
+    constitution: 3
+    intelligence: 4
+    wisdom: 5
+    charisma: 6
+    maxHitPoint: 7
+    generated: 2018-10-10T22:09:26.799
+  matchers:
+    body:
+      - path: $.generated
+        type: by_regex
+        value: "([0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9]).([0-9]{0,3})"
+      - path: $.strength
+        type: by_regex
+        value: "[1-9][0-9]{0,1}"
+      - path: $.dexterity
+        type: by_regex
+        value: "[1-9][0-9]{0,1}"
+      - path: $.constitution
+        type: by_regex
+        value: "[1-9][0-9]{0,1}"
+      - path: $.intelligence
+        type: by_regex
+        value: "[1-9][0-9]{0,1}"
+      - path: $.wisdom
+        type: by_regex
+        value: "[1-9][0-9]{0,1}"
+      - path: $.charisma
+        type: by_regex
+        value: "[1-9][0-9]{0,1}"
+      - path: $.maxHitPoint
+        type: by_regex
+        value: "[1-9][0-9]{0,1}"
+  headers:
+    Content-Type: application/json;charset=UTF-8

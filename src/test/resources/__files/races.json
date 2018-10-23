@@ -1,0 +1,41 @@
+{
+  "count": 9,
+  "results": [
+    {
+      "name": "Dwarf",
+      "url": "http://localhost:9999/api/races/1"
+    },
+    {
+      "name": "Elf",
+      "url": "http://localhost:9999/api/races/2"
+    },
+    {
+      "name": "Halfling",
+      "url": "http://localhost:9999/api/races/3"
+    },
+    {
+      "name": "Human",
+      "url": "http://localhost:9999/api/races/4"
+    },
+    {
+      "name": "Dragonborn",
+      "url": "http://localhost:9999/api/races/5"
+    },
+    {
+      "name": "Gnome",
+      "url": "http://localhost:9999/api/races/6"
+    },
+    {
+      "name": "Half-Elf",
+      "url": "http://localhost:9999/api/races/7"
+    },
+    {
+      "name": "Half-Orc",
+      "url": "http://localhost:9999/api/races/8"
+    },
+    {
+      "name": "Tiefling",
+      "url": "http://localhost:9999/api/races/9"
+    }
+  ]
+}

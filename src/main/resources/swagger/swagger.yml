@@ -1,0 +1,205 @@
+swagger: "2.0"
+info:
+  description: "This service is intended to be a generator for D&D 5th edition characters, in order to create wonderful NPG or enemy on the fly"
+  version: "1.0"
+  title: "D&D 5th edition generator"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "work@andrea.lorenzani.name"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost:9999"
+basePath: "/"
+tags:
+- name: "generate"
+  description: "Generate your new character"
+  externalDocs:
+    description: "External API used"
+    url: "http://www.dnd5eapi.co/"
+schemes:
+- "https"
+- "http"
+paths:
+  /generate:
+    post:
+      tags:
+      - "generate"
+      summary: "Generate a new NPG"
+      description: "Generate a new NPG based on the info provided"
+      operationId: "generateCharacter"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "request"
+        description: "The required info for generating your character"
+        required: true
+        schema:
+          $ref: "#/definitions/CharRequest"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Character"
+        400:
+          description: "Invalid input"
+          schema:
+            $ref: "#/definitions/ErrorMessage"
+        500:
+          description: "Internal error"
+          schema:
+            $ref: "#/definitions/ErrorMessage"
+  /generate/{numOfChars}:
+    post:
+      tags:
+      - "generate"
+      summary: "Generate a number of similar characters"
+      description: "Given the information of your characters, it generates different similar characters"
+      operationId: "genChars"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "numOfChars"
+        in: "path"
+        description: "the number of similar characters to generate"
+        required: true
+        type: "integer"
+        format: "int32"
+      - in: "body"
+        name: "request"
+        description: "The required info for generating your characters"
+        required: true
+        schema:
+          $ref: "#/definitions/CharRequest"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Characters"
+        400:
+          description: "Invalid input"
+          schema:
+            $ref: "#/definitions/ErrorMessage"
+        500:
+          description: "Internal error"
+          schema:
+            $ref: "#/definitions/ErrorMessage"
+    
+definitions:
+  Characters:
+    type: "object"
+    required:
+      - characters
+    properties:
+      characters:
+        type: "array"
+        items:
+          $ref: "#/definitions/Character"
+  Character:
+    type: "object"
+    required:
+      - strength
+      - dexterity
+      - constitution
+      - intelligence
+      - wisdom
+      - charisma
+      - maxHitPoint
+    properties:
+      name:
+        type: "string"
+        description: "The name of the character"
+        example: "Thor"
+      strength:
+        type: "integer"
+        format: "int32"
+        example: 10
+      dexterity:
+        type: "integer"
+        format: "int32"
+        example: 16
+      constitution:
+        type: "integer"
+        format: "int32"
+        example: 18
+      intelligence:
+        type: "integer"
+        format: "int32"
+        example: 12
+      wisdom:
+        type: "integer"
+        format: "int32"
+        example: 3
+      charisma:
+        type: "integer"
+        format: "int32"
+        example: 16
+      maxHitPoint:
+        type: "integer"
+        format: "int32"
+        example: 156
+      generated:
+        type: "string"
+        format: "date-time"
+        example: "2018-07-04T08:14:25.619Z"
+  CharRequest:
+    type: "object"
+    required:
+      - level
+      - race
+      - class
+    properties:
+      level:
+        type: "integer"
+        format: "int32"
+      race:
+        type: "string"
+        description: "The selected race"
+        enum:
+        - "dwarf"
+        - "elf"
+        - "halfling"
+        - "human"
+        - "dragonborn"
+        - "gnome"
+        - "half-elf"
+        - "half-orc"
+        - "tiefling"
+      class:
+        type: "string"
+        description: "The selected class"
+        enum:
+        - "barbarian"
+        - "bard"
+        - "cleric"
+        - "druid"
+        - "fighter"
+        - "monk"
+        - "paladin"
+        - "ranger"
+        - "rogue"
+        - "sorcerer"
+        - "warlock"
+        - "wizard"
+  ErrorMessage:
+    type: "object"
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: "string"
+        description: "internal code"
+        example: "01"
+      message:
+        type: "string"
+        description: "explanation of the error message"
+        example: "Unable to generate the character"
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

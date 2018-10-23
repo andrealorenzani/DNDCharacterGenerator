@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: dndgenerator
+  cloud:
+    enabled: true
+    config:
+      fail-fast: true
+      discovery:
+        enabled: false
+
+encrypt:
+  failOnError: false
+
+---
+spring:
+  profiles: local
+  cloud:
+    config:
+      enabled: false
+      discovery:
+        enabled: false
+    bus:
+      enabled: false
+
+---
+spring:
+  profiles: logging
+
+logging:
+  level:
+    org.springframework.ws.client.MessageTracing: trace
+    name.lorenzani.andrea: debug
+  config: classpath:logback-elk.xml

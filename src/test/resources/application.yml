@@ -1,0 +1,13 @@
+server:
+  port: 9019
+
+swagger:
+  api:
+    version: 1.2.0
+
+
+dndapi:
+  defaultUrl: http://localhost:9999/
+  apis:
+    - classes: ${dndapi.defaultUrl}classes
+    - races: ${dndapi.defaultUrl}races

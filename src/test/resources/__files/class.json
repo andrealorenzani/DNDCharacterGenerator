@@ -1,0 +1,53 @@
+{
+  "count": 12,
+  "results": [
+    {
+      "name": "Barbarian",
+      "url": "http://localhost:9999/api/classes/1"
+    },
+    {
+      "name": "Bard",
+      "url": "http://localhost:9999/api/classes/2"
+    },
+    {
+      "name": "Cleric",
+      "url": "http://localhost:9999/api/classes/3"
+    },
+    {
+      "name": "Druid",
+      "url": "http://localhost:9999/api/classes/4"
+    },
+    {
+      "name": "Fighter",
+      "url": "http://localhost:9999/api/classes/5"
+    },
+    {
+      "name": "Monk",
+      "url": "http://localhost:9999/api/classes/6"
+    },
+    {
+      "name": "Paladin",
+      "url": "http://localhost:9999/api/classes/7"
+    },
+    {
+      "name": "Ranger",
+      "url": "http://localhost:9999/api/classes/8"
+    },
+    {
+      "name": "Rogue",
+      "url": "http://localhost:9999/api/classes/9"
+    },
+    {
+      "name": "Sorcerer",
+      "url": "http://localhost:9999/api/classes/10"
+    },
+    {
+      "name": "Warlock",
+      "url": "http://localhost:9999/api/classes/11"
+    },
+    {
+      "name": "Wizard",
+      "url": "http://localhost:9999/api/classes/12"
+    }
+  ]
+}

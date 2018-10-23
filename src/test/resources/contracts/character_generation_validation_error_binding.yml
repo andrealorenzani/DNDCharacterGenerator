@@ -1,0 +1,15 @@
+request:
+  method: POST
+  url: /generate
+  body:
+    level: 1
+    class: clazz
+  headers:
+    Content-Type: application/json
+response:
+  status: 400
+  body:
+    code: "03"
+    message: "race must not be empty"
+  headers:
+    Content-Type: application/json;charset=UTF-8

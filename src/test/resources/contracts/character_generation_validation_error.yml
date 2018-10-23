@@ -1,0 +1,12 @@
+request:
+  method: POST
+  url: /generate
+  headers:
+    Content-Type: application/json
+response:
+  status: 500
+  body:
+    code: 99
+    message: "Required request body is missing: public name.lorenzani.andrea.dnd.generator.model.Character name.lorenzani.andrea.dnd.generator.controller.DndCharacterGenerator.generateCharacter(name.lorenzani.andrea.dnd.generator.model.CharRequest)"
+  headers:
+    Content-Type: application/json;charset=UTF-8

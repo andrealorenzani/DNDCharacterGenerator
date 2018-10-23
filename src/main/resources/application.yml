@@ -1,0 +1,26 @@
+server:
+  port: 9019
+
+swagger:
+  api:
+    version: @project.version@
+
+info:
+  build:
+    groupId: '@project.groupId@'
+    artifact: '@project.artifactId@'
+    description: '@project.description@'
+    version: '@project.version@'
+    git:
+      originUrl: '@git.remote.origin.url@'
+      branch: '@git.branch@'
+      commit:
+        id: '@git.commit.id@'
+        time: '@git.commit.time@'
+        message: "@git.commit.message.short@"
+
+dndapi:
+  defaultUrl: http://www.dnd5eapi.co/api/
+  apis:
+    - classes: ${dndapi.defaultUrl}classes/
+    - races: ${dndapi.defaultUrl}races/

@@ -1,0 +1,12 @@
+{
+    "request": {
+        "urlPath": "/api/classes/3"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "class_cleric.json",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

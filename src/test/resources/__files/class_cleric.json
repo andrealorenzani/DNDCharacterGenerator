@@ -1,0 +1,81 @@
+{
+  "_id": "5bce90ff5b7768e792017cf4",
+  "index": 3,
+  "name": "Cleric",
+  "hit_die": 8,
+  "proficiency_choices": [
+    {
+      "from": [
+        {
+          "name": "Skill: History",
+          "url": "http://www.dnd5eapi.co/api/proficiencies/110"
+        },
+        {
+          "name": "Skill: Insight",
+          "url": "http://www.dnd5eapi.co/api/proficiencies/111"
+        },
+        {
+          "name": "Skill: Medicine",
+          "url": "http://www.dnd5eapi.co/api/proficiencies/114"
+        },
+        {
+          "name": "Skill: Persuasion",
+          "url": "http://www.dnd5eapi.co/api/proficiencies/118"
+        },
+        {
+          "name": "Skill: Religion",
+          "url": "http://www.dnd5eapi.co/api/proficiencies/119"
+        }
+      ],
+      "type": "proficiencies",
+      "choose": 2
+    }
+  ],
+  "proficiencies": [
+    {
+      "url": "http://www.dnd5eapi.co/api/proficiencies/1",
+      "name": "Light armor"
+    },
+    {
+      "url": "http://www.dnd5eapi.co/api/proficiencies/2",
+      "name": "Medium armor"
+    },
+    {
+      "url": "http://www.dnd5eapi.co/api/proficiencies/18",
+      "name": "Shields"
+    },
+    {
+      "url": "http://www.dnd5eapi.co/api/proficiencies/19",
+      "name": "Simple weapons"
+    }
+  ],
+  "saving_throws": [
+    {
+      "url": "http://www.dnd5eapi.co/api/ability-scores/5",
+      "name": "WIS"
+    },
+    {
+      "url": "http://www.dnd5eapi.co/api/ability-scores/6",
+      "name": "CHA"
+    }
+  ],
+  "starting_equipment": {
+    "url": "http://www.dnd5eapi.co/api/startingequipment/3",
+    "class": "Cleric"
+  },
+  "class_levels": {
+    "url": "http://www.dnd5eapi.co/api/classes/Cleric/levels",
+    "class": "Cleric"
+  },
+  "subclasses": [
+    {
+      "name": "Life",
+      "url": "http://www.dnd5eapi.co/api/subclasses/3"
+    }
+  ],
+  "spellcasting": {
+    "url": "http://www.dnd5eapi.co/api/spellcasting/2",
+    "class": "Cleric"
+  },
+  "url": "http://www.dnd5eapi.co/api/classes/3"
+}

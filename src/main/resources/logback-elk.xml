@@ -1,0 +1,30 @@
+<configuration debug="true">
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <springProperty scope="context" name="application" source="spring.application.name"/>
+    <springProperty scope="context" name="version" source="info.build.version"/>
+
+    <!-- docs: https://github.com/logstash/logstash-logback-encoder -->
+    <appender name="stash" class="net.logstash.logback.appender.LogstashSocketAppender">
+        <host>elk</host>
+        <port>7050</port>
+
+        <provider class="net.logstash.logback.composite.loggingevent.LoggingEventPatternJsonProvider">
+            <pattern>
+                {
+                "severity": "%level",
+                "service": "${application:-}",
+                "trace": "%X{X-B3-TraceId:-}",
+                "span": "%X{X-B3-SpanId:-}",
+                "pid": "${PID:-}",
+                "thread": "%thread",
+                "class": "%logger{40}",
+                "rest": "%message"
+                }
+            </pattern>
+        </provider>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="stash"/>
+    </root>
+</configuration>
